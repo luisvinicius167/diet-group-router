@@ -1,7 +1,7 @@
 module.exports = app => {
   app.group = (endpoint) => {
     const routes = Object.assign({}, app);
-    const methods = [
+    [
       'get',
       'post',
       'head',
@@ -10,14 +10,11 @@ module.exports = app => {
       'patch',
       'trace',
       'options'
-    ];
-    for (let i in routes) {
-      if (methods.includes(i)) {
-        routes[i] = (...args) => {
-          app[i].call(app, `${endpoint}${args[0]}`, ...args);
+    ].forEach( method => {
+      routes[method] = (...args) => {
+          app[method].call(app, `${endpoint}${args[0]}`, ...args);
         }
-      }
-    };
+    });
     return Promise.resolve(routes);
   }
 }

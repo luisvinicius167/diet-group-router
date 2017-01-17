@@ -1,0 +1,14 @@
+{
+  "name": "diet-group-router",
+  "version": "0.0.1",
+  "description": "A grouping route module for Diet.js.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "diet.js"
+  ],
+  "author": "Luis Vinicius",
+  "license": "MIT"
+}

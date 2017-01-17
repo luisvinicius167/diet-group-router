@@ -30,3 +30,13 @@ npm install diet-group-router
 
   app.listen(8000)
 ```
+
+## API
+
+```app.group```: return a Promise with the app server instance
+
+```javascript
+  app.group('/users').then( app => {
+    app.post('/register', controller.register);
+  });
+ ``` 

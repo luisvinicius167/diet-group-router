@@ -1,6 +1,6 @@
 {
   "name": "diet-group-router",
-  "version": "0.0.2",
+  "version": "0.1.2",
   "description": "A grouping route module for Diet.js.",
   "main": "index.js",
   "scripts": {

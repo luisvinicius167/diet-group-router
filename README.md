@@ -22,7 +22,7 @@ Promise.resolve(users).then(app => {
 })
 
 Promise.resolve(app.group('/api')).then(app => {
-  app.post('/list', controller.register);
+  app.post('/list', controller.list);
 })
 
 ```

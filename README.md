@@ -19,24 +19,25 @@ npm install diet-group-router
   require('diet-group-router')(app);
 
   // Now you have the app.group method available
-  app.group('/users').then( app => {
-    //users/register
-    app.post('/register', controller.register);
-    //users/login
-    app.post('/login', controller.login);
-    //users/logout
-    app.post('/logout', controller.logout);
-  });
-
+  app.group('/users')
+  //users/register
+  app.post('/register', controller.register);
+  //users/login
+  app.post('/login', controller.login);
+  //users/logout
+  app.post('/logout', controller.logout);
+  
+  app.group('/api')
+  //api/list
+  app.post('/list', controller.list);
+  
   app.listen(8000)
 ```
 
 ## API
 
-```app.group```: return a Promise with the app server instance
-
+```app.group```: return 
 ```javascript
-  app.group('/users').then( app => {
-    app.post('/register', controller.register);
-  });
+  app.group('/users')
+  app.post('/register', controller.register);
  ``` 

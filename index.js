@@ -15,6 +15,6 @@ module.exports = app => {
           app[method].call(app, `${endpoint}${args[0]}`, ...args);
         }
     });
-    return Promise.resolve(routes);
+    return routes;
   }
 }

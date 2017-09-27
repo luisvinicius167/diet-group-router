@@ -19,17 +19,17 @@ npm install diet-group-router
   require('diet-group-router')(app);
 
   // Now you have the app.group method available
-  app.group('/users')
+  const users = app.group('/users')
   //users/register
-  app.post('/register', controller.register);
+  users.post('/register', controller.register);
   //users/login
-  app.post('/login', controller.login);
+  users.post('/login', controller.login);
   //users/logout
-  app.post('/logout', controller.logout);
+  users.post('/logout', controller.logout);
   
-  app.group('/api')
+  var api = app.group('/api')
   //api/list
-  app.post('/list', controller.list);
+  api.post('/list', controller.list);
   
   app.listen(8000)
 ```

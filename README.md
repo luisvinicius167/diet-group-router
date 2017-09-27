@@ -38,6 +38,6 @@ npm install diet-group-router
 
 ```app.group```: return 
 ```javascript
-  app.group('/users')
-  app.post('/register', controller.register);
+  const users = app.group('/users')
+  users.post('/register', controller.register);
  ``` 
